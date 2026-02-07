@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BillTap – Legal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --primary: #FF7A00;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .tab.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .content {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      background: #fff;
+    }
+
+    h2 {
+      margin-top: 24px;
+      font-size: 18px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>BillTap – Legal</h1>
+      <p>Privacy Policy & Terms • Last updated: February 2026</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showSection('privacy')">Privacy Policy</button>
+      <button class="tab" onclick="showSection('terms')">Terms & Conditions</button>
+    </div>
+
+    <div class="content" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>
+        BillTap is a billing and invoice application designed for freelancers,
+        shop owners, and small businesses.
+      </p>
+
+      <h2>Information Collection</h2>
+      <p>
+        BillTap does not require signup or login. We do not directly collect
+        personal information such as name, email address, or phone number.
+      </p>
+
+      <h2>Local Data Storage</h2>
+      <p>
+        All invoices, business details, and generated PDFs are stored locally
+        on the user’s device. We do not upload or sync this data to any server.
+      </p>
+
+      <h2>Payments</h2>
+      <p>
+        Premium subscriptions are handled securely through Google Play Billing.
+        BillTap does not store or process payment or card details.
+      </p>
+
+      <h2>Advertisements</h2>
+      <p>
+        Free users may see ads served by Google AdMob. AdMob may collect
+        device-related data as per Google’s privacy policy.
+      </p>
+
+      <h2>Sharing</h2>
+      <p>
+        Invoices and PDFs are shared only when the user chooses to share them
+        via WhatsApp or other apps.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Email: <strong>sensoralabs@gmail.com</strong>
+      </p>
+    </div>
+
+    <div class="content" id="terms" style="display:none;">
+      <h2>Terms & Conditions</h2>
+
+      <h2>Usage</h2>
+      <p>
+        BillTap allows users to create invoices and PDF bills for business use.
+        Users are responsible for the accuracy of entered information.
+      </p>
+
+      <h2>Free & Premium</h2>
+      <p>
+        Free users may have limits on PDF generation and may see ads.
+        Premium users receive unlimited PDFs and an ad-free experience.
+      </p>
+
+      <h2>Subscriptions</h2>
+      <p>
+        Premium subscriptions are billed through Google Play. Billing,
+        renewals, and cancellations are managed by Google.
+      </p>
+
+      <h2>Data Responsibility</h2>
+      <p>
+        All data is stored locally on the device. Uninstalling the app may
+        remove stored data.
+      </p>
+
+      <h2>Liability</h2>
+      <p>
+        BillTap is provided “as is”. We are not liable for losses arising from
+        app usage.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Email: <strong>sensoralabs@gmail.com</strong>
+      </p>
+    </div>
+
+    <footer>
+      © 2026 BillTap •
+    </footer>
+  </div>
+
+  <script>
+    function showSection(section) {
+      document.getElementById('privacy').style.display =
+        section === 'privacy' ? 'block' : 'none';
+      document.getElementById('terms').style.display =
+        section === 'terms' ? 'block' : 'none';
+
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
