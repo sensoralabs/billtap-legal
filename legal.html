@@ -1,194 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BillTap – Privacy & Terms</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BillTap Legal</title>
 
 <style>
-:root{
-  --primary:#FF7A00;
-  --bg:#F8F9FB;
-  --card:#FFFFFF;
-  --text:#1C1C1E;
-  --muted:#6B7280;
-  --border:#E5E7EB;
-}
-
-*{
-  box-sizing:border-box;
-  font-family:Inter, system-ui, -apple-system, sans-serif;
-}
-
 body{
+  font-family: Inter, system-ui;
+  background:#FFF7ED;
   margin:0;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-}
-
-header{
-  background:linear-gradient(135deg,#FF7A00,#FF9A2F);
-  padding:40px 20px;
-  text-align:center;
-  color:white;
-}
-
-header h1{
-  margin:0;
-  font-size:28px;
-  font-weight:700;
-}
-
-header p{
-  margin-top:8px;
-  font-size:14px;
-  opacity:0.9;
+  color:#111827;
 }
 
 .container{
   max-width:900px;
-  margin:-30px auto 40px auto;
-  padding:0 20px;
+  margin:auto;
+  padding:20px;
 }
 
 .card{
-  background:var(--card);
-  border-radius:18px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.05);
-  padding:25px;
+  background:#fff;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid #E5E7EB;
 }
+
+h1{text-align:center;}
+h2{margin-top:20px;color:#FF7A00;}
+p,li{font-size:14px;color:#374151;}
+ul{padding-left:18px;}
 
 .tabs{
   display:flex;
-  gap:10px;
-  margin-bottom:25px;
+  gap:8px;
+  margin-bottom:15px;
 }
 
 .tab{
   flex:1;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid var(--border);
+  padding:10px;
+  border:1px solid #E5E7EB;
+  border-radius:8px;
   background:#fff;
-  font-weight:600;
   cursor:pointer;
-  transition:0.2s ease;
-  color:var(--muted);
 }
 
 .tab.active{
-  background:var(--primary);
-  color:white;
-  border-color:var(--primary);
+  background:#FF7A00;
+  color:#fff;
 }
 
-h2{
-  margin-top:28px;
-  font-size:18px;
-  font-weight:600;
-}
+.section{display:none;}
+.section.active{display:block;}
 
-.section{
-  display:none;
-  animation:fadeIn 0.25s ease;
-}
-
-.section.active{
-  display:block;
-}
+a{color:#FF7A00;text-decoration:none;}
 
 footer{
   text-align:center;
-  margin-top:30px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(5px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@media(max-width:600px){
-  header h1{
-    font-size:22px;
-  }
+  margin-top:20px;
+  color:#6B7280;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>BillTap Legal</h1>
-  <p>Privacy Policy & Terms • Updated February 2026</p>
-</header>
-
 <div class="container">
-  <div class="card">
 
-    <div class="tabs">
-      <button class="tab active" onclick="switchTab('privacy')">Privacy Policy</button>
-      <button class="tab" onclick="switchTab('terms')">Terms & Conditions</button>
-    </div>
+<h1>BillTap Legal</h1>
 
-    <!-- PRIVACY -->
-    <div id="privacy" class="section active">
-      <h2>About BillTap</h2>
-      <p>BillTap is a billing and invoice application designed for freelancers and small businesses.</p>
+<div class="card">
 
-      <h2>Information Collection</h2>
-      <p>BillTap does not require signup or login. We do not directly collect personal information such as email or passwords.</p>
+<div class="tabs">
+<button class="tab active" onclick="switchTab(event,'privacy')">Privacy</button>
+<button class="tab" onclick="switchTab(event,'terms')">Terms</button>
+</div>
 
-      <h2>Local Data Storage</h2>
-      <p>All invoices, business details, and generated PDFs are stored locally on your device. No data is uploaded to external servers.</p>
+<!-- PRIVACY -->
+<div id="privacy" class="section active">
 
-      <h2>Advertisements</h2>
-      <p>The free version uses Google AdMob for displaying ads. AdMob may collect device-related data according to Google’s privacy policies.</p>
+<h2>1. Information</h2>
+<p>BillTap stores business, invoice, and product data locally on your device.</p>
 
-      <h2>Subscriptions</h2>
-      <p>Premium subscriptions (₹49/month) are processed securely through Google Play Billing. BillTap does not store payment details.</p>
+<h2>2. No Login</h2>
+<p>No signup or login is required. We do not collect personal account data.</p>
 
-      <h2>Data Deletion</h2>
-      <p>If the app is uninstalled, locally stored data may be permanently deleted.</p>
+<h2>3. Data Storage</h2>
+<p>All data is stored locally. No cloud storage is used.</p>
 
-      <h2>Contact</h2>
-      <p>Email: <strong>sensoralabs@gmail.com</strong></p>
-    </div>
+<h2>4. Ads</h2>
+<p>Free version uses Google AdMob which may collect device-level data.</p>
 
-    <!-- TERMS -->
-    <div id="terms" class="section">
-      <h2>Usage</h2>
-      <p>Users may use BillTap to create invoices and bills for lawful business purposes only.</p>
+<h2>5. Subscriptions</h2>
+<p>Paid features are handled via Google Play Billing.</p>
 
-      <h2>Free & Premium</h2>
-      <p>Free users may have limitations. Premium users receive unlimited PDF generation and an ad-free experience.</p>
+<ul>
+<li>Pro Plan: ₹99/month (Offer ₹49)</li>
+<li>AI Scanner Plan: ₹299/month (50 scans included)</li>
+</ul>
 
-      <h2>Billing & Renewals</h2>
-      <p>All subscriptions are managed through Google Play. Cancellations and refunds follow Google Play policies.</p>
+<h2>6. Features</h2>
+<ul>
+<li>Barcode Billing</li>
+<li>Excel Reports</li>
+<li>Invoice Generation</li>
+<li>AI Bill Scanner</li>
+</ul>
 
-      <h2>Liability</h2>
-      <p>BillTap is provided "as is" without warranties. We are not responsible for financial losses resulting from app usage.</p>
+<h2>7. Data Deletion</h2>
+<p>Uninstalling the app may delete all local data permanently.</p>
 
-      <h2>Changes to Terms</h2>
-      <p>We may update these terms when necessary. Continued usage means acceptance of updated terms.</p>
-    </div>
+<h2>8. Contact</h2>
+<p>Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a></p>
 
-  </div>
+</div>
 
-  <footer>
-    © 2026 BillTap • Sensora Labs
-  </footer>
+<!-- TERMS -->
+<div id="terms" class="section">
+
+<h2>1. Usage</h2>
+<p>BillTap is a business tool for billing and invoicing.</p>
+
+<h2>2. Responsibility</h2>
+<p>Users are responsible for accuracy of invoices and financial data.</p>
+
+<h2>3. Plans</h2>
+<ul>
+<li>Free Plan with ads</li>
+<li>Pro Plan ₹99/month (discount ₹49)</li>
+<li>AI Scanner ₹299/month</li>
+</ul>
+
+<h2>4. Payments</h2>
+<p>All payments are processed through Google Play.</p>
+
+<h2>5. AI Disclaimer</h2>
+<p>AI scanning results may not be accurate. Users must verify data.</p>
+
+<h2>6. Liability</h2>
+<p>We are not responsible for financial loss or data loss.</p>
+
+<h2>7. Updates</h2>
+<p>Terms may change anytime. Continued use means acceptance.</p>
+
+<h2>8. Contact</h2>
+<p>Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a></p>
+
+</div>
+
+</div>
+
+<footer>© 2026 BillTap</footer>
+
 </div>
 
 <script>
-function switchTab(tab){
-  document.querySelectorAll('.section').forEach(sec=>sec.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(btn=>btn.classList.remove('active'));
-
-  document.getElementById(tab).classList.add('active');
-  event.target.classList.add('active');
+function switchTab(e,tab){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+e.target.classList.add('active');
 }
 </script>
 
