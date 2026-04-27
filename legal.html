@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,43 +13,22 @@ body{
   margin:0;
   color:#111827;
 }
-
 .header{
   background:linear-gradient(135deg,#FF7A00,#FF9A2F);
   padding:30px 20px;
   text-align:center;
   color:#fff;
 }
-
-.header h1{
-  margin:0;
-  font-size:24px;
-}
-
-.header p{
-  font-size:13px;
-  opacity:0.9;
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-
+.header h1{margin:0;font-size:24px;}
+.header p{font-size:13px;opacity:0.9;}
+.container{max-width:900px;margin:auto;padding:20px;}
 .card{
   background:#fff;
   padding:20px;
   border-radius:14px;
   border:1px solid #E5E7EB;
 }
-
-.tabs{
-  display:flex;
-  gap:8px;
-  margin-bottom:15px;
-}
-
+.tabs{display:flex;gap:8px;margin-bottom:15px;}
 .tab{
   flex:1;
   padding:10px;
@@ -58,59 +38,32 @@ body{
   cursor:pointer;
   font-weight:600;
 }
-
-.tab.active{
-  background:#FF7A00;
-  color:#fff;
-}
-
+.tab.active{background:#FF7A00;color:#fff;}
 .section{display:none;}
 .section.active{display:block;}
-
-h2{
-  margin-top:20px;
-  color:#FF7A00;
-  font-size:16px;
-}
-
-p,li{
-  font-size:14px;
-  color:#374151;
-  line-height:1.6;
-}
-
+h2{margin-top:20px;color:#FF7A00;font-size:16px;}
+p,li{font-size:14px;color:#374151;line-height:1.6;}
 ul{padding-left:18px;}
-
 .highlight{
   background:#FFF3E0;
   padding:10px;
   border-radius:8px;
   border:1px solid #FFE0B2;
 }
-
-a{
-  color:#FF7A00;
-  text-decoration:none;
-}
-
-footer{
-  text-align:center;
-  margin-top:20px;
-  color:#6B7280;
-  font-size:13px;
-}
+a{color:#FF7A00;text-decoration:none;}
+footer{text-align:center;margin-top:20px;color:#6B7280;font-size:13px;}
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
   <h1>BillTap Legal</h1>
-  <p>Privacy Policy & Terms • Updated March 2026</p>
+  <p>Privacy Policy & Terms • Updated 2026</p>
 </div>
 
 <div class="container">
-
 <div class="card">
 
 <div class="tabs">
@@ -119,76 +72,113 @@ footer{
 </div>
 
 <!-- PRIVACY -->
+
 <div id="privacy" class="section active">
 
 <h2>1. Overview</h2>
-<p>BillTap is a billing and invoice management application designed for small businesses and freelancers.</p>
+<p>BillTap is a billing and invoice management application designed for freelancers, shop owners, and small businesses.</p>
 
-<h2>2. Data Collection</h2>
-<p>BillTap does not require login or account creation. We do not collect personal identity data such as email, password, or phone number.</p>
+<h2>2. Data We Collect</h2>
+<ul>
+<li>Email address (Google Sign-In or Email login)</li>
+<li>User ID (Firebase authentication)</li>
+<li>Business details (name, phone, address)</li>
+<li>Device and usage data (via Google AdMob)</li>
+<li>Purchase history (Google Play Billing)</li>
+<li>Crash logs and diagnostics (Firebase)</li>
+</ul>
 
-<h2>3. Local Data Storage</h2>
-<p>All data including invoices, products, and business details are stored locally on your device. No cloud storage or external server is used.</p>
+<h2>3. Data Storage</h2>
+<p>
+Data is stored locally on your device for fast performance.  
+For logged-in or premium users, data may be securely synced using cloud services (Firebase).
+</p>
 
 <div class="highlight">
-⚠️ Important: Uninstalling the app may permanently delete all stored data.
+⚠️ Uninstalling the app may permanently delete locally stored data.
 </div>
 
-<h2>4. Advertisements</h2>
-<p>The free version of BillTap uses Google AdMob. AdMob may collect device-level information according to Google's privacy policy.</p>
+<h2>4. Authentication</h2>
+<p>Users can login via Email/Password, Google Sign-In, or continue as Guest.</p>
 
-<h2>5. Subscriptions</h2>
-<p>All premium features are processed securely via Google Play Billing.</p>
+<h2>5. Advertisements</h2>
+<p>We use Google AdMob. Ads may collect device identifiers and usage data as per Google’s policies.</p>
 
+<h2>6. Subscriptions</h2>
+<p>Premium features are provided via Google Play Billing.</p>
 <ul>
-<li><strong>Pro Plan:</strong> ₹99/month (Limited Offer ₹49)</li>
-<li><strong>AI Scanner Plan:</strong> ₹299/month (50 scans included)</li>
+<li>Pro Plan: ₹49/month</li>
+<li>AI Scanner Plan: ₹299/month(Upcoming)</li>
+</ul>
+<p>Subscriptions auto-renew unless cancelled via Google Play.</p>
+
+<h2>7. Tax & Regional Features</h2>
+<p>BillTap supports GST (India) and VAT/Sales Tax (international users). Users are responsible for proper configuration.</p>
+
+<h2>8. Delete Account</h2>
+
+<p>Users can permanently delete their account and all associated data directly from the app.</p>
+
+<h3>How to delete account:</h3>
+<ul>
+<li>1. Open the BillTap app</li>
+<li>2. Go to Settings</li>
+<li>3. Tap "Delete Account"</li>
+<li>4. Confirm deletion</li>
 </ul>
 
-<h2>6. Features Covered</h2>
+<h3>What data is deleted:</h3>
 <ul>
-<li>Invoice Generation</li>
-<li>Barcode Billing</li>
-<li>Excel Reports</li>
-<li>AI Bill Scanner (OCR)</li>
-<li>Analytics Dashboard</li>
+<li>User profile and account data</li>
+<li>All invoices and business records (if synced)</li>
+<li>Cloud-stored data (Firebase)</li>
 </ul>
 
-<h2>7. Data Security</h2>
-<p>Since data is stored locally, users are responsible for device-level security and backups.</p>
+<h3>Data retention:</h3>
+<ul>
+<li>No personal data is retained after deletion</li>
+<li>Temporary backups may persist for up to 30 days</li>
+</ul>
 
-<h2>8. Contact</h2>
+<p>If you cannot delete your account in-app, contact us:</p>
 <p>Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a></p>
+
+<h2>9. Data Responsibility</h2>
+<p>Users are responsible for accuracy of invoices, financial records, and tax compliance.</p>
+
+<h2>10. Security</h2>
+<p>We implement reasonable security practices, but users are responsible for device-level protection.</p>
 
 </div>
 
 <!-- TERMS -->
+
 <div id="terms" class="section">
 
 <h2>1. Usage</h2>
-<p>BillTap is intended for lawful business use including invoice generation and record keeping.</p>
+<p>BillTap is intended for lawful billing, invoicing, and business record management.</p>
 
 <h2>2. User Responsibility</h2>
-<p>Users are responsible for ensuring accuracy of all billing and financial data generated through the app.</p>
+<p>Users must ensure accuracy of all data and comply with applicable tax laws (GST, VAT, etc.).</p>
 
 <h2>3. Plans & Pricing</h2>
 <ul>
 <li>Free Plan (Ad-supported)</li>
-<li>Pro Plan ₹99/month (Offer ₹49)</li>
-<li>AI Scanner ₹299/month (50 scans)</li>
+<li>Pro Plan ₹49/month</li>
+<li>AI Scanner ₹299/month(Upcoming)</li>
 </ul>
 
 <h2>4. Payments</h2>
-<p>All subscriptions and payments are handled through Google Play. Refunds and cancellations follow Google Play policies.</p>
+<p>All payments are handled via Google Play Billing. Subscriptions auto-renew unless cancelled.</p>
 
 <h2>5. AI Disclaimer</h2>
-<p>AI-based bill scanning may not be 100% accurate. Users must verify extracted data before use.</p>
+<p>AI-based features (OCR scanning) may produce errors. Users must verify all extracted data.</p>
 
 <h2>6. Limitation of Liability</h2>
-<p>BillTap is provided "as-is". We are not responsible for financial loss, incorrect invoices, or data loss.</p>
+<p>BillTap is provided "as-is". We are not responsible for financial loss, incorrect invoices, or misuse.</p>
 
 <h2>7. Updates</h2>
-<p>We may update these terms periodically. Continued use of the app indicates acceptance of updated terms.</p>
+<p>We may update these policies at any time. Continued use of the app implies acceptance.</p>
 
 <h2>8. Contact</h2>
 <p>Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a></p>
@@ -198,7 +188,6 @@ footer{
 </div>
 
 <footer>© 2026 BillTap • Sensora Labs</footer>
-
 </div>
 
 <script>
