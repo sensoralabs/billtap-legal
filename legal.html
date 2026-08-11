@@ -4,108 +4,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BillTap Legal</title>
 
 <style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family: Inter, system-ui;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:#FFF7ED;
   margin:0;
   color:#111827;
 }
+
 .header{
   background:linear-gradient(135deg,#FF7A00,#FF9A2F);
-  padding:30px 20px;
+  padding:34px 20px 30px;
   text-align:center;
   color:#fff;
+  box-shadow:0 8px 30px rgba(255,122,0,0.18);
 }
+
 .header h1{
   margin:0;
-  font-size:26px;
-  font-weight:700;
+  font-size:28px;
+  font-weight:750;
+  letter-spacing:-0.5px;
 }
+
 .header p{
   font-size:13px;
-  opacity:0.95;
+  opacity:0.96;
+  margin:9px 0 0;
 }
+
+.version{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:14px;
+  background:rgba(255,255,255,0.16);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:7px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  backdrop-filter:blur(8px);
+}
+
 .container{
-  max-width:900px;
+  max-width:920px;
   margin:auto;
-  padding:20px;
+  padding:24px 18px 35px;
 }
+
 .card{
   background:#fff;
-  padding:20px;
-  border-radius:16px;
+  padding:22px;
+  border-radius:20px;
   border:1px solid #E5E7EB;
-  box-shadow:0 10px 30px rgba(0,0,0,0.04);
+  box-shadow:
+    0 12px 35px rgba(17,24,39,0.06),
+    0 2px 8px rgba(17,24,39,0.03);
 }
+
 .tabs{
   display:flex;
   gap:8px;
-  margin-bottom:15px;
+  margin-bottom:22px;
+  padding:5px;
+  background:#FFF7ED;
+  border:1px solid #FFE4C7;
+  border-radius:14px;
 }
+
 .tab{
   flex:1;
-  padding:12px;
-  border:1px solid #E5E7EB;
+  padding:13px 12px;
+  border:0;
   border-radius:10px;
-  background:#fff;
+  background:transparent;
+  color:#4B5563;
   cursor:pointer;
-  font-weight:600;
-  transition:0.2s ease;
+  font-weight:650;
+  font-size:14px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
+.tab:hover{
+  transform:translateY(-1px);
+}
+
 .tab.active{
   background:#FF7A00;
   color:#fff;
+  box-shadow:0 5px 14px rgba(255,122,0,0.20);
 }
+
 .section{
   display:none;
 }
+
 .section.active{
   display:block;
 }
+
 h2{
-  margin-top:22px;
-  color:#FF7A00;
-  font-size:17px;
+  margin-top:25px;
+  margin-bottom:9px;
+  color:#E96900;
+  font-size:18px;
+  font-weight:720;
+  letter-spacing:-0.2px;
 }
+
 h3{
-  margin-top:18px;
+  margin-top:20px;
+  margin-bottom:8px;
   font-size:15px;
+  font-weight:700;
+  color:#1F2937;
 }
-p,li{
+
+p,
+li{
   font-size:14px;
   color:#374151;
-  line-height:1.7;
+  line-height:1.75;
 }
+
+p{
+  margin-top:8px;
+}
+
 ul{
-  padding-left:18px;
+  padding-left:21px;
 }
+
+li{
+  margin-bottom:4px;
+}
+
 .highlight{
-  background:#FFF3E0;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #FFE0B2;
-  margin-top:12px;
+  background:linear-gradient(135deg,#FFF7ED,#FFF3E0);
+  padding:15px 16px;
+  border-radius:13px;
+  border:1px solid #FFDDB5;
+  margin-top:14px;
+  color:#374151;
 }
+
+.highlight strong{
+  color:#C75A00;
+}
+
+.update-card{
+  background:#F9FAFB;
+  border:1px solid #E5E7EB;
+  border-radius:14px;
+  padding:15px 16px;
+  margin-top:14px;
+}
+
+.update-card-title{
+  font-size:14px;
+  font-weight:700;
+  color:#111827;
+  margin-bottom:8px;
+}
+
+.update-card ul{
+  margin:7px 0 0;
+}
+
 a{
-  color:#FF7A00;
+  color:#E96900;
   text-decoration:none;
+  font-weight:600;
 }
+
+a:hover{
+  text-decoration:underline;
+}
+
+.contact-box{
+  margin-top:12px;
+  padding:14px 16px;
+  border-radius:13px;
+  background:#FFF7ED;
+  border:1px solid #FFE0B2;
+}
+
 footer{
   text-align:center;
-  margin-top:20px;
+  margin-top:22px;
   color:#6B7280;
   font-size:13px;
+  line-height:1.6;
 }
-.version{
-  display:inline-block;
-  margin-top:8px;
-  background:rgba(255,255,255,0.15);
-  padding:6px 12px;
-  border-radius:999px;
-  font-size:12px;
+
+.footer-brand{
+  color:#E96900;
+  font-weight:650;
+}
+
+@media(max-width:600px){
+
+  .header{
+    padding:28px 16px;
+  }
+
+  .header h1{
+    font-size:25px;
+  }
+
+  .container{
+    padding:16px 12px 28px;
+  }
+
+  .card{
+    padding:16px;
+    border-radius:17px;
+  }
+
+  .tabs{
+    gap:5px;
+  }
+
+  .tab{
+    padding:12px 8px;
+    font-size:13px;
+  }
+
+  h2{
+    font-size:17px;
+  }
+
+  p,
+  li{
+    font-size:13.5px;
+  }
 }
 </style>
 
@@ -114,18 +261,27 @@ footer{
 <body>
 
 <div class="header">
+
   <h1>BillTap Legal</h1>
-  <p>Privacy Policy & Terms • Updated June 2026 • BillTap v1.0.9</p>
+
+  <p>
+    Privacy Policy & Terms • Updated August 2026 • BillTap v1.1.0
+  </p>
 
   <div class="version">
-    Modern AI-Powered Business Management App
+    ✦ Modern AI-Powered Business Management App
   </div>
+
 </div>
 
+
 <div class="container">
+
 <div class="card">
 
+
 <div class="tabs">
+
 <button class="tab active" onclick="switchTab(event,'privacy')">
 Privacy Policy
 </button>
@@ -133,11 +289,14 @@ Privacy Policy
 <button class="tab" onclick="switchTab(event,'terms')">
 Terms & Conditions
 </button>
+
 </div>
+
 
 <!-- PRIVACY -->
 
 <div id="privacy" class="section active">
+
 
 <h2>1. Overview</h2>
 
@@ -145,20 +304,56 @@ Terms & Conditions
 BillTap is a modern AI-powered business management application designed for freelancers, shop owners, resellers, solo entrepreneurs, and small businesses.
 </p>
 
+
 <div class="highlight">
-🚀 BillTap v1.0.9 introduces Inventory-to-Billing integration, barcode-based product management, Edit & Delete Bill support, PDF & Excel export enhancements, country-based currency support, premium restore verification, Guest Mode improvements, faster startup performance, offline-first storage, and stability enhancements.
+
+<strong>🚀 BillTap v1.1.0 Update</strong>
+
+<p>
+Version 1.1.0 includes improved Google Sign-In and Sign-Up authentication, Firebase authentication stability improvements, email authentication improvements, Guest Mode improvements, Google Play purchase and subscription flow improvements, advertising integration improvements, profile and account-flow enhancements, and general performance and stability improvements.
+</p>
+
 </div>
+
+
+<div class="update-card">
+
+<div class="update-card-title">
+What's improved in BillTap v1.1.0
+</div>
+
+<ul>
+<li>Google Sign-In and Sign-Up authentication improvements</li>
+<li>Email Sign-In and Sign-Up improvements</li>
+<li>Firebase Authentication stability improvements</li>
+<li>Guest Mode improvements</li>
+<li>Google Play Billing and purchase flow improvements</li>
+<li>Free-plan advertising support using Google AdMob</li>
+<li>Profile and account-flow improvements</li>
+<li>General performance and stability improvements</li>
+</ul>
+
+</div>
+
 
 <h2>2. Data We Collect</h2>
 
 <ul>
+
 <li>Email address (Google Sign-In or Email login)</li>
+
 <li>User ID (Firebase Authentication)</li>
+
 <li>Business details (name, phone, address)</li>
+
 <li>Device and usage data (Google AdMob)</li>
+
 <li>Purchase history (Google Play Billing)</li>
+
 <li>Crash logs and diagnostics (Firebase)</li>
+
 </ul>
+
 
 <h2>3. Data Storage</h2>
 
@@ -166,22 +361,30 @@ BillTap is a modern AI-powered business management application designed for free
 BillTap follows an offline-first architecture. Invoices, inventory records, reports, settings, and business data may be stored locally on your device for faster access and offline use. Logged-in users may additionally use Firebase cloud synchronization.
 </p>
 
+
 <div class="highlight">
+
 ⚠️ Uninstalling the app or clearing app data may permanently remove locally stored records.
+
 </div>
 
+
 <h2>4. Authentication</h2>
- 
 
 <p>
 Users can access BillTap using:
 </p>
 
 <ul>
+
 <li>Email & Password login</li>
+
 <li>Google Sign-In</li>
- <li>Guest Mode with local device storage</li>
+
+<li>Guest Mode with local device storage</li>
+
 </ul>
+
 
 <h2>5. Advertisements</h2>
 
@@ -190,6 +393,7 @@ BillTap uses Google AdMob for advertisements in the free plan.
 Google may collect limited device identifiers and usage analytics according to Google's policies.
 </p>
 
+
 <h2>6. Premium Features & Subscription</h2>
 
 <p>
@@ -197,34 +401,56 @@ Premium features are provided through Google Play Billing.
 </p>
 
 <ul>
+
 <li>Free Plan (Ad-supported)</li>
+
 <li>BillTap Pro Intro Offer ₹49/month</li>
+
 <li>Regular Pro Pricing ₹99/month</li>
+
 </ul>
 
 <p>
 Subscriptions auto-renew unless cancelled through Google Play.
 </p>
 
+
 <h2>7. Core Features</h2>
 
 <ul>
+
 <li>Smart invoice generation</li>
+
 <li>Inventory management</li>
+
 <li>Inventory-to-Billing integration</li>
+
 <li>Barcode scanning and product lookup</li>
+
 <li>Edit and delete invoices</li>
+
 <li>PDF invoice exports</li>
+
 <li>Excel report exports</li>
+
 <li>GST, VAT and Sales Tax support</li>
+
 <li>Country-based currency support</li>
+
 <li>Multi-currency invoice generation</li>
+
 <li>Business activity tracking</li>
+
 <li>Cloud sync using Firebase</li>
+
 <li>Offline-first business management</li>
+
 <li>Premium subscription features</li>
+
 <li>AI-powered business tools (upcoming)</li>
+
 </ul>
+
 
 <h2>8. Tax & Regional Features</h2>
 
@@ -233,18 +459,27 @@ BillTap supports:
 </p>
 
 <ul>
+
 <li>GST support for India</li>
+
 <li>VAT support for supported regions</li>
+
 <li>Sales Tax support where applicable</li>
+
 <li>Automatic country-based currency support</li>
+
 <li>Multi-currency invoice generation</li>
+
 <li>Currency-aware PDF exports</li>
+
 <li>Currency-aware Excel exports</li>
+
 </ul>
 
 <p>
 Users are responsible for configuring taxes correctly according to local regulations.
 </p>
+
 
 <h2>9. Inventory & Billing Features</h2>
 
@@ -253,14 +488,23 @@ BillTap provides integrated inventory and billing functionality.
 </p>
 
 <ul>
+
 <li>Inventory-to-Billing integration</li>
+
 <li>Barcode-based product lookup</li>
+
 <li>Automatic product selection from inventory</li>
+
 <li>Bill editing and updating</li>
+
 <li>Bill deletion support</li>
+
 <li>Stock tracking features</li>
+
 <li>Invoice and inventory synchronization</li>
+
 </ul>
+
 
 <h2>10. Delete Account</h2>
 
@@ -268,47 +512,73 @@ BillTap provides integrated inventory and billing functionality.
 Users can permanently delete their account and associated cloud data directly from the app.
 </p>
 
+
 <h3>How to delete account:</h3>
 
 <ul>
+
 <li>1. Open BillTap</li>
+
 <li>2. Go to Settings</li>
+
 <li>3. Tap “Delete Account”</li>
+
 <li>4. Confirm deletion</li>
+
 </ul>
+
 
 <h3>Deleted data includes:</h3>
 
 <ul>
+
 <li>User profile</li>
+
 <li>Invoices and billing history</li>
+
 <li>Business information</li>
+
 <li>Cloud synced Firebase records</li>
+
 </ul>
+
 
 <h3>Retention:</h3>
 
 <ul>
+
 <li>No personal data is intentionally retained after deletion</li>
+
 <li>Temporary backups may remain for up to 30 days</li>
+
 </ul>
+
+
+<div class="contact-box">
 
 <p>
 If deletion fails, contact:
 </p>
 
 <p>
+
 Email:
+
 <a href="mailto:sensoralabs@gmail.com">
 sensoralabs@gmail.com
 </a>
+
 </p>
+
+</div>
+
 
 <h2>11. PDF & Report Exports</h2>
 
 <p>
 BillTap allows users to generate PDF invoices and export business reports. Users are responsible for verifying invoice details, taxes, discounts, customer information, and exported records before business use.
 </p>
+
 
 <h2>12. User Responsibility</h2>
 
@@ -317,23 +587,32 @@ Users are responsible for:
 </p>
 
 <ul>
+
 <li>Invoice accuracy</li>
+
 <li>Business records</li>
+
 <li>Tax compliance</li>
+
 <li>Financial reporting</li>
+
 </ul>
 
-<h2>11. Security</h2>
+
+<h2>13. Security</h2>
 
 <p>
 We implement reasonable security measures, but users are responsible for protecting their own devices and login credentials.
 </p>
 
+
 </div>
+
 
 <!-- TERMS -->
 
 <div id="terms" class="section">
+
 
 <h2>1. Usage</h2>
 
@@ -341,19 +620,26 @@ We implement reasonable security measures, but users are responsible for protect
 BillTap is intended for lawful billing, invoicing, inventory management, and business record tracking.
 </p>
 
+
 <h2>2. User Responsibility</h2>
 
 <p>
 Users must ensure all data entered into BillTap is accurate and legally compliant with local tax regulations.
 </p>
 
+
 <h2>3. Plans & Pricing</h2>
 
 <ul>
+
 <li>Free Plan (Ad-supported)</li>
+
 <li>BillTap Pro ₹49/month</li>
+
 <li>BillTap Pro pricing may vary by region, promotional offers, and future subscription plans.</li>
+
 </ul>
+
 
 <h2>4. Payments</h2>
 
@@ -365,12 +651,14 @@ All payments and subscriptions are handled securely through Google Play Billing.
 Subscriptions renew automatically unless cancelled by the user through Google Play.
 </p>
 
+
 <h2>5. AI Disclaimer</h2>
 
 <p>
 AI-related features such as OCR or AI Bill Scanning may occasionally produce incorrect results.
 Users must verify all generated or extracted information before use.
 </p>
+
 
 <h2>6. Limitation of Liability</h2>
 
@@ -380,12 +668,19 @@ We are not responsible for:
 </p>
 
 <ul>
+
 <li>Financial losses</li>
+
 <li>Incorrect invoices</li>
+
 <li>Tax filing mistakes</li>
+
 <li>Business losses</li>
+
 <li>Improper usage of the app</li>
+
 </ul>
+
 
 <h2>7. Updates</h2>
 
@@ -394,39 +689,64 @@ We may update these policies periodically.
 Continued usage of BillTap implies acceptance of updated terms.
 </p>
 
+
 <h2>8. Contact</h2>
 
+<div class="contact-box">
+
 <p>
+
 Email:
+
 <a href="mailto:sensoralabs@gmail.com">
 sensoralabs@gmail.com
 </a>
+
 </p>
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 <footer>
-© 2026 BillTap • Powered by Sensora Labs
+
+© 2026 BillTap • Powered by
+<span class="footer-brand">Sensora Labs</span>
+
+<br>
+
+BillTap v1.1.0
+
 </footer>
+
+
 </div>
 
+
 <script>
+
 function switchTab(e,tab){
 
-document.querySelectorAll('.section')
-.forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.section')
+  .forEach(s=>s.classList.remove('active'));
 
-document.querySelectorAll('.tab')
-.forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab')
+  .forEach(t=>t.classList.remove('active'));
 
-document.getElementById(tab)
-.classList.add('active');
+  document.getElementById(tab)
+  .classList.add('active');
 
-e.target.classList.add('active');
+  e.currentTarget.classList.add('active');
+
 }
+
 </script>
+
 
 </body>
 </html>
